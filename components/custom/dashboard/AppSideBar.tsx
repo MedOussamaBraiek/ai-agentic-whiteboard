@@ -71,7 +71,7 @@ export function AppSidebar() {
           <Progress value={66} className="h-2 mt-2" />
         </div>
 
-        <div>
+        <div className="flex items-center gap-2 p-4 border rounded-md">
           <Image
             src={user?.imageUrl ?? ""}
             alt="User Image"
@@ -79,6 +79,9 @@ export function AppSidebar() {
             width={40}
             className="rounded-full"
           />
+          <h2>
+            {user?.firstName} {user?.lastName}
+          </h2>
         </div>
       </SidebarFooter>
     </Sidebar>
